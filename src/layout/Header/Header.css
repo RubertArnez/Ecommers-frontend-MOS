@@ -1,0 +1,81 @@
+
+  .cont-header {
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 5px solid var(--primary-color-dark);
+    align-self: center;
+}
+
+header {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    text-align: center;
+    /* padding: 40px 15px;  */
+    font-size: .50rem;
+}
+
+.header-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+header a:hover {
+    color: var(--primary-color-dark);
+    height: 3rem; 
+
+}
+
+.user-name {
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: aliceblue;
+    font-size: 1.rem;
+}
+.userName {
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(74, 16, 146);
+    font-size: 1.2rem;
+}
+
+
+.boxLogo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+}
+
+.logo-img {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--primary-color);
+    border-radius: 50px;
+    margin: .5rem;
+}
+
+.titulo {
+    color: white;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 2.3rem;
+}
+
+.usuario {
+    display: flex;
+    font-size: 1.2rem;
+    gap: 2rem;
+    align-self: center;
+    margin: 1rem;
+}
