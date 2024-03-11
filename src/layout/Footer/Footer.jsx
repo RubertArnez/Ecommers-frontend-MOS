@@ -21,9 +21,9 @@ export default function Fotter() {
                             <FontAwesomeIcon icon="fa-regular fa-mug-hot" />
                             <FontAwesomeIcon icon="fa-thin fa-hat-cowboy" />!
                         </div>  */}
-                       <li><i className="fa-brands fa-facebook fa-xl" style="color:  #2f7ff7;"></i> Facebook</li>
+                       {/* <li><i className="fa-brands fa-facebook fa-xl" style="color:  #2f7ff7;"></i> Facebook</li>
                     <li><i className="fa-brands fa-instagram fa-xl" style="color: #fb4ce9;"></i> Instagram</li>
-                    <li><i className="fa-brands fa-twitter fa-xl" style="color: #61c5f3;"></i> twitter</li>
+                    <li><i className="fa-brands fa-twitter fa-xl" style="color: #61c5f3;"></i> twitter</li> */}
 
                     </ul>
                 </div>
@@ -63,9 +63,9 @@ export default function Fotter() {
               </div>
             </div>
                      <ul className="social_list">
-                         <li><i className="fa-solid fa-envelope" style="color: #ffffff;"></i> Correo</li>
+                         {/* <li><i className="fa-solid fa-envelope" style="color: #ffffff;"></i> Correo</li>
                     <li><i className="fa-solid fa-phone" style="color: #ffffff;"></i> Teléfono</li>
-                    <li><i className="fa-solid fa-location-dot" style="color: #ffffff;"></i> Dirección</li> 
+                    <li><i className="fa-solid fa-location-dot" style="color: #ffffff;"></i> Dirección</li>  */}
                     </ul> 
                 </div>
 

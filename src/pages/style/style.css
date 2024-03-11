@@ -423,7 +423,7 @@ ul {
     border: none;
 
     &:not(:last-child) {
-        margin-right: 5px;
+        margin-right: .5em;
     }
 
     &.btn-danger {

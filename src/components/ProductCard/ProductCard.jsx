@@ -1,14 +1,14 @@
 import React from 'react'
 import '../ProductCard/ProductCard.css'
 
-// export const ProductCard = ({ product }) => {
-export const ProductCard = () => {
+export const ProductCard = ({ product }) => {
+// export const ProductCard = () => {
 
 
     return (
         <div className="productos">
             <div className="producto">
-            {/* 
+            
             <small>{product._id}</small>
             
                 <h4 className="ProductoTitulo">
@@ -23,7 +23,7 @@ export const ProductCard = () => {
                 <p className="productoPrecio">
                     ${product.price}
                 </p>
-                 */}
+                
                 <div className="ProductoBoton">
                     <button>Ver más</button>
                     <button>Comprar</button>

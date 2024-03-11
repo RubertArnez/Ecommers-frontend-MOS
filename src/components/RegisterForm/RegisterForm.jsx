@@ -3,6 +3,9 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import axios from "axios";
+// import { UserTable } from '../UserTable/UserTable';
+
+
 
 const URL = import.meta.env.VITE_SERVER_URL;
 // Defino variable global para mi componente para user el TOKEN en distintas peticiones

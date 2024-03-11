@@ -1,6 +1,5 @@
-// import React from "react";
-
-import { useEffect, useState, React } from 'react';
+// import { useEffect, useState, React } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
 import axios from 'axios';
@@ -8,23 +7,23 @@ const URL = import.meta.env.VITE_SERVER_URL;
 
 export default function AdminProduct() {
 	const { register, handleSubmit } = useForm();
-	const [categories, setCategories] = useState([]);
+	// const [categories, setCategories] = useState([]);
 
-	useEffect(() => {
-		getCategories();
-	}, []);
+	// useEffect(() => {
+	// 	getCategories();
+	// }, []);
 
-	async function getCategories() {
-		try {
-			const response = await axios.get(`${URL}/product/categories`);
-			const { categories } = response.data;
+	// async function getCategories() {
+	// 	try {
+	// 		const response = await axios.get(`${URL}/product/categories`);
+	// 		const { categories } = response.data;
 
-			setCategories(categories);
-		} catch (error) {
-			console.log(error);
-			Swal.fire('Error', 'Ocurrio un error al obtener las categorias', 'error');
-		}
-	}
+	// 		setCategories(categories);
+	// 	} catch (error) {
+	// 		console.log(error);
+	// 		Swal.fire('Error', 'Ocurrio un error al obtener las categorias', 'error');
+	// 	}
+	// }
 
 	async function submitedData(data) {
 		try {
@@ -40,7 +39,7 @@ export default function AdminProduct() {
 
 			formData.forEach((value, key) => console.log(key, value));
 
-			await axios.post(`${URL}/products`, formData, {
+			await axios.post(`${URL}/product`, formData, {
 				headers: {
 					Authorization: localStorage.getItem('token'),
 				},
@@ -70,7 +69,8 @@ export default function AdminProduct() {
 							type="text"
 							id="product"
 							className="admin-input"
-							{...register('name')}
+							// {...register('name')}
+							{...register('productName')}
 						/>
 					</div>
 					<div className="input-group">
@@ -86,7 +86,8 @@ export default function AdminProduct() {
 						<textarea
 							rows={6}
 							className="admin-input"
-							{...register('description')}
+							// {...register('description')}
+							{...register('fullDescripcion')}
 						></textarea>
 					</div>
 					<div className="input-group">
@@ -109,23 +110,23 @@ export default function AdminProduct() {
 						/>
 						Activo
 					</div>
-					<div className="input-group">
+					{/* <div className="input-group">
 						<select
 							defaultValue="default"
 							disabled={!categories.length}
 							className="admin-input"
 							{...register('category')}
 						>
-							<option value="default" disabled>
+							 <option value="default" disabled>
 								Seleccione una categoria
-							</option>
+							</option> 
 							{categories.map((category) => (
 								<option key={category._id} value={category._id}>
 									{category.name}
 								</option>
 							))}
 						</select>
-					</div>
+					</div> */}
 					<div className="input-group">
 						<button type="submit">Crear Producto</button>
 					</div>

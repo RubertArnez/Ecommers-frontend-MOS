@@ -1,5 +1,4 @@
-
-import {React, useEffect, useState } from 'react';
+import { React, useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
 import axios from 'axios';
 import { UserTable } from '../../components/UserTable/UserTable';
@@ -84,9 +83,6 @@ const AdminUser = () => {
 				}
 			}
 		});
-
-		// const users =
-		// Debo actualizar el estado de mis usuarios quitando el user que se BORRO
 	}
 
 	useEffect(
@@ -96,18 +92,6 @@ const AdminUser = () => {
 		}, //	Funcion que se ejecuta cuando se monta el componente
 		[limit]
 	);
-
-	// async function getCategories() {
-	// 	try {
-	// 		const response = await axios.get(`${URL}/categories`);
-	// 		const categoriesDB = response.data.categories;
-
-	// 		//	Setear un estado que maneje las categorias
-	// 		setCategories(categoriesDB);
-	// 	} catch (error) {
-	// 		console.log("No se pudieron obtener las categorias");
-	// 	}
-	// }
 
 	async function handleSearch(e) {
 		// Hacer una peticion a mi servidor para buscar usuarios
@@ -128,8 +112,7 @@ const AdminUser = () => {
 			// Mensaje para el usuario de que no se pudo buscar o algo
 		}
 	}
-	
-// Editar Usuario
+	// Editar Usuario
 	function fnSetFormValue(user) {
 		const { _id, ...formValue } = user;
 		setUserId(_id);
@@ -150,44 +133,39 @@ const AdminUser = () => {
 				</div>
 			</div>
 
-	 		<div className="table-container">
-	 			{/* Tabla con mis productos para manejar el CRUD de los mismos */}
-	 			<div className="flex-between">
-	 				<h2>Tabla de productos</h2>
-	 				<div className="input-group">
-	 					<label htmlFor="search">Buscar producto</label>
-	 					<input type="text" id="search" onKeyUp={handleSearch} />
-	 				</div>
-	 			</div>
-	 			<UserTable
-	 				users={dbUsers}
-	 				deleteUser={deleteUser}
-	 				fnSetFormValue={fnSetFormValue}
-	 			/>
-	 			<div className="table-utils">
-	 				<div className="pagination-container">
-	 					{totalButtons.map((btn) => (
-	 						<button key={btn} onClick={() => getUsers(btn)}>
-	 							{btn + 1}
-	 						</button>
-	 					))}
-	 					{/* {Array.from({ length: Math.ceil(total / limit) }).map((_, idx) => (
-	 						<button key={idx} onClick={() => getUsers(idx)}>
-	 							{idx + 1}
-	 						</button>
-	 					))} */}
-	 				</div>
-	 				<div>
-	 					<select onChange={(e) => setLimit(e.target.value)}>
-	 						<option value={2}>2</option>
-	 						<option value={5}>5</option>
-	 						<option value={10}>10</option>
-	 					</select>
-	 				</div>
-	 			</div>
-	 		</div>
-	 	</div>
-	 );
+			<div className="table-container">
+				{/* Tabla con mis productos para manejar el CRUD de los mismos */}
+				<div className="flex-between">
+					<h2>Tabla de productos</h2>
+					<div className="input-group">
+						<label htmlFor="search">Buscar producto</label>
+						<input type="text" id="search" onKeyUp={handleSearch} />
+					</div>
+				</div>
+				<UserTable
+					users={dbUsers}
+					deleteUser={deleteUser}
+					fnSetFormValue={fnSetFormValue}
+				/>
+				<div className="table-utils">
+					<div className="pagination-container">
+						{totalButtons.map((btn) => (
+							<button key={btn} onClick={() => getUsers(btn)}>
+								{btn + 1}
+							</button>
+						))}
+					</div>
+					<div>
+						<select onChange={(e) => setLimit(e.target.value)}>
+							<option value={2}>2</option>
+							<option value={5}>5</option>
+							<option value={10}>10</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default AdminUser;
