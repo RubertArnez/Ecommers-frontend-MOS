@@ -1,5 +1,6 @@
 import React from 'react'
 import '../ProductCard/ProductCard.css'
+import productDefault from '../../assets/imagenes/default-product-picture.jpg'
 
 export const ProductCard = ({ product }) => {
 // export const ProductCard = () => {
@@ -8,8 +9,17 @@ export const ProductCard = ({ product }) => {
     return (
         <div className="productos">
             <div className="producto">
-            
-            <small>{product._id}</small>
+            {/* <div className="productoImg"> */}
+				<img className="productoImg"
+					src={
+						product.image
+							? `${URL}/images/users/${product.image}`
+							: productDefault
+					}
+					alt={product.name}
+				/>
+			{/* </div> */}
+            {/* <small>{product._id}</small> */}
             
                 <h4 className="ProductoTitulo">
                     {product.productName}

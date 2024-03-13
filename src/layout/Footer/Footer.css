@@ -34,7 +34,15 @@ footer {
 .social {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer i {
+  margin: .5rem;
+  font-size: 2rem;
+  color: var(--primary-color-dark);
+ 
 }
 
 footer li {

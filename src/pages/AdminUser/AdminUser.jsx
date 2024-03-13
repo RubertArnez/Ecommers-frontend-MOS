@@ -47,6 +47,7 @@ const AdminUser = () => {
 		}
 	}
 
+	// Borrar Usuario 
 	async function deleteUser(id) {
 		Swal.fire({
 			title: `Confirma borrar este usuario?`,
@@ -92,7 +93,7 @@ const AdminUser = () => {
 		}, //	Funcion que se ejecuta cuando se monta el componente
 		[limit]
 	);
-
+// Buscar 
 	async function handleSearch(e) {
 		// Hacer una peticion a mi servidor para buscar usuarios
 		try {
@@ -122,7 +123,7 @@ const AdminUser = () => {
 	return (
 		<div className="admin-dashboard">
 			<div className="form-container">
-				{/* Formulario de carga de productos */}
+				{/* Formulario de carga de usuarios */}
 				<div className="form-sticky">
 					<RegisterForm
 						getUsers={getUsers}

@@ -14,6 +14,7 @@ import AdminProduct from './pages/AdminProduct/AdminProduct';
 import AdminUser from './pages/AdminUser/AdminUser';
 import AdminRoute from './assets/Guard/Admin/AdminRoute';
 import './pages/style/style.css';
+import { Order } from './pages/Order/Order.jsx';
 
 function App() {
 	return (
@@ -27,7 +28,7 @@ function App() {
 					<Route path="/AboutUs" element={<AboutUs />} />
 					<Route path="/Registro" element={<Registro />} />
 					<Route path="/Login" element={<Login />} />
-
+					<Route path="/orders" element={ <Order /> } />
 					{/* Rutas protegidas con el Guard AdminRoute */}
 					<Route
 						path="/AdminProduct"

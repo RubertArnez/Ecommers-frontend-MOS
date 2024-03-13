@@ -1,17 +1,16 @@
-import defaultPicture from "../../assets/imagenes/default-profile-picture.jpg";
-import React from "react";
+import defaultPicture from '../../assets/imagenes/default-profile-picture.jpg';
+import React from 'react';
 
 const URL = import.meta.env.VITE_SERVER_URL;
 
 export const UserTableRow = ({ usr, deleteUser, fnSetFormValue }) => {
-
-	
-
 	return (
 		<tr key={usr._id}>
 			<td className="table-img">
 				<img
-					src={usr.image ? `${URL}/images/users/${usr.image}` : defaultPicture}
+					src={
+						usr.image ? `${URL}/images/users/${usr.image}` : defaultPicture
+					}
 					alt={`${usr.name} profile picture`}
 				/>
 			</td>
